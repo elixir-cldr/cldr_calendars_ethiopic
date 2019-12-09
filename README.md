@@ -2,11 +2,11 @@
 
 This library implements the Ethiopic calendar.
 
-From [wikipedia](https://en.wikipedia.org/wiki/Ethiopic_calendar):
+From [wikipedia](https://en.wikipedia.org/wiki/Ethiopian_calendar):
 
-The Ethiopic calendar, also called the Alexandrian calendar, is a liturgical calendar used by the Ethiopic Orthodox Church and also used by the farming populace in Egypt. This calendar is based on the ancient Egyptian calendar. To avoid the calendar creep of the latter, a reform of the ancient Egyptian calendar was introduced at the time of Ptolemy III (Decree of Canopus, in 238 BC) which consisted of the intercalation of a sixth epagomenal day every fourth year. However, this reform was opposed by the Egyptian priests, and the reform was not adopted until 25 BC, when the Roman Emperor Augustus imposed the Decree upon Egypt as its official calendar (although it was unsynchronized with the newly introduced Julian calendar which had erroneously been intercalating leap days every third year due to a misinterpration of the leap year rule so as to apply inclusive counting).
+The Ethiopian calendar (Amharic: የኢትዮጵያ ዘመን አቆጣጠር; yä'Ityoṗṗya zëmän aḳoṭaṭär) or Eritrean calendar is the principal calendar used in Ethiopia and also serves as the liturgical year for Christians in Eritrea and Ethiopia belonging to the Eritrean Orthodox Tewahedo Church, Ethiopian Orthodox Tewahedo Church, Eastern Catholic Churches, the Coptic Orthodox Church of Alexandria, and P'ent'ay (Ethiopian-Eritrean Evangelical) Churches (most Protestants in the diaspora have the option of choosing the Ethiopian calendar and/or the Gregorian calendar for religious holidays, with this option being used when the corresponding eastern celebration is not a public holiday in the western world). The Ethiopian calendar is a solar calendar which in turn derives from the Egyptian calendar, but like the Julian calendar, it adds a leap day every four years without exception, and begins the year on August 29 or August 30 in the Julian calendar. A gap of 7–8 years between the Ethiopian and Gregorian calendars results from an alternative calculation in determining the date of the Annunciation.
 
-To distinguish it from the Ancient Egyptian calendar, which remained in use by some astronomers until medieval times, this reformed calendar is known as the Ethiopic calendar. Its years and months coincide with those of the Ethiopian calendar but have different numbers and names.
+Like the Coptic calendar, the Ethiopic calendar has 12 months of 30 days plus 5 or 6 epagomenal days, which comprise a thirteenth month. The Ethiopian months begin on the same days as those of the Coptic calendar, but their names are in Ge'ez. A 6th epagomenal day is added every 4 years, without exception, on August 29 of the Julian calendar, 6 months before the corresponding Julian leap day. Thus the first day of the Ethiopian year, 1 Mäskäräm, for years between 1900 and 2099 (inclusive), is usually September 11 (Gregorian). However, it falls on September 12 in years before the Gregorian leap year.
 
 ## Usage
 
@@ -14,13 +14,13 @@ To distinguish it from the Ancient Egyptian calendar, which remained in use by s
 
 For Elixir versions up to and including 1.9, a date can be created by:
 ```elixir
-iex> {:ok, date} = Date.new(1736, 3, 30, Cldr.Calendar.Ethiopic]
-{:ok, ~D[1736-03-30 Cldr.Calendar.Ethiopic]}
+iex> {:ok, date} = Date.new(2012, 3, 30, Cldr.Calendar.Ethiopic]
+{:ok, ~D[2012-03-30 Cldr.Calendar.Ethiopic]}
 ```
 For Elixir version 1.10 and later `Sigil_D` supports user-defined calendars:
 ```
-iex> ~D[1736-03-30 Cldr.Calendar.Ethiopic]
-~D[1736-03-30 Cldr.Calendar.Ethiopic]
+iex> ~D[2012-03-30 Cldr.Calendar.Ethiopic]
+~D[2012-03-30 Cldr.Calendar.Ethiopic]
 ```
 
 ## Localization
@@ -30,17 +30,20 @@ iex> ~D[1736-03-30 Cldr.Calendar.Ethiopic]
 Basic localization is executed by the `Cldr.Calendar.localize/3`. For example:
 
 ```elixir
+iex> {:ok, date} = Date.new(2012,03,30, Cldr.Calendar.Ethiopic)
+{:ok, ~D[2012-03-30 Cldr.Calendar.Ethiopic]}
+
 iex> Cldr.Calendar.localize(date, :month, locale: "en")
 "Hator"
+
+iex> Cldr.Calendar.localize(date, :month, locale: "am")
+"ኅዳር"
 
 iex> Cldr.Calendar.localize(date, :day_of_week, locale: "en")
 "Tue"
 
-iex> Cldr.Calendar.localize(date, :day_of_week, locale: "ar-EG")
-"الثلاثاء"
-
-iex> Cldr.Calendar.localize(date, :month, locale: "ar-EG")
-"هاتور"
+iex> Cldr.Calendar.localize(date, :day_of_week, locale: "am")
+"ማክሰ"
 ```
 
 ## Relationship to other libraries
