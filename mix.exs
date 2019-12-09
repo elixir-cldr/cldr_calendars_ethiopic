@@ -1,16 +1,16 @@
-defmodule Cldr.Calendars.Coptic.MixProject do
+defmodule Cldr.Calendars.Ethiopic.MixProject do
   use Mix.Project
 
   @version "0.1.0"
 
   def project do
     [
-      app: :ex_cldr_calendars_coptic,
+      app: :ex_cldr_calendars_ethiopic,
       version: @version,
       elixir: "~> 1.8",
       start_permanent: Mix.env() == :prod,
       deps: deps(),
-      source_url: "https://github.com/elixir-cldr/cldr_calendars_coptic",
+      source_url: "https://github.com/elixir-cldr/cldr_calendars_ethiopic",
       description: description(),
       package: package(),
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -23,7 +23,7 @@ defmodule Cldr.Calendars.Coptic.MixProject do
 
   def description do
     """
-    Implementation of the Coptic calendar for Elixir
+    Implementation of the Ethiopic calendar for Elixir
     """
   end
 
@@ -63,9 +63,9 @@ defmodule Cldr.Calendars.Coptic.MixProject do
 
   def links do
     %{
-      "GitHub" => "https://github.com/elixir-cldr/cldr_calendars_coptic",
-      "Readme" => "https://github.com/elixir-cldr/cldr_calendars_coptic/blob/v#{@version}/README.md",
-      "Changelog" => "https://github.com/elixir-cldr/cldr_calendars_coptic/blob/v#{@version}/CHANGELOG.md"
+      "GitHub" => "https://github.com/elixir-cldr/cldr_calendars_ethiopic",
+      "Readme" => "https://github.com/elixir-cldr/cldr_calendars_ethiopic/blob/v#{@version}/README.md",
+      "Changelog" => "https://github.com/elixir-cldr/cldr_calendars_ethiopic/blob/v#{@version}/CHANGELOG.md"
     }
   end
 

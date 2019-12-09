@@ -1,4 +1,4 @@
-defmodule Cldr.Calendar.Coptic do
+defmodule Cldr.Calendar.Ethiopic do
   @moduledoc """
   The present Iranian calendar was legally adopted on 31
   March 1925, under the early Pahlavi dynasty. The law
@@ -8,7 +8,7 @@ defmodule Cldr.Calendar.Coptic do
   in each month, which previously varied by year with
   the sidereal zodiac.
 
-  It revived the ancient Coptic names, which are still
+  It revived the ancient Ethiopic names, which are still
   used. It specifies the origin of the calendar to be
   the Hegira of Muhammad from Mecca to Medina in 622 CE).
 
@@ -23,7 +23,6 @@ defmodule Cldr.Calendar.Coptic do
   @type day :: 1..31
 
   @months_in_year 13
-  @months_in_quarter 3
   @days_in_week 7
 
   @doc """
@@ -35,7 +34,7 @@ defmodule Cldr.Calendar.Coptic do
   """
   @impl true
   def cldr_calendar_type do
-    :coptic
+    :ethiopic
   end
 
   @doc """
@@ -46,7 +45,7 @@ defmodule Cldr.Calendar.Coptic do
     :month
   end
 
-  @epoch Cldr.Calendar.Julian.date_to_iso_days(284, 8, 29)
+  @epoch Cldr.Calendar.Julian.date_to_iso_days(8, 8, 29)
   def epoch do
     @epoch
   end
@@ -295,11 +294,6 @@ defmodule Cldr.Calendar.Coptic do
   """
   @impl true
   def plus(year, month, day, date_part, increment, options \\ [])
-
-  def plus(year, month, day, :quarters, quarters, options) do
-    months = quarters * @months_in_quarter
-    plus(year, month, day, :months, months, options)
-  end
 
   def plus(year, month, day, :months, months, options) do
     months_in_year = months_in_year(year)
