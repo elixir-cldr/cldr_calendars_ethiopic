@@ -418,9 +418,6 @@ defmodule Cldr.Calendar.Ethiopic do
   defdelegate day_rollover_relative_to_midnight_utc, to: Calendar.ISO
 
   @doc false
-  defdelegate months_in_year(year), to: Calendar.ISO
-
-  @doc false
   defdelegate time_from_day_fraction(day_fraction), to: Calendar.ISO
 
   @doc false
