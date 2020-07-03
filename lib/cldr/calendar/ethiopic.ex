@@ -4,6 +4,7 @@ defmodule Cldr.Calendar.Ethiopic do
 
   """
   import Cldr.Math, only: [mod: 2]
+  import Cldr.Macros
 
   @behaviour Calendar
   @behaviour Cldr.Calendar
@@ -175,13 +176,22 @@ defmodule Cldr.Calendar.Ethiopic do
   end
 
   @doc """
-  Calculates the number of period in a given `year`. A period
+  Returns the number of periods in a given `year`. A period
   corresponds to a month in month-based calendars and
   a week in week-based calendars..
 
   """
   @impl true
   def periods_in_year(_year) do
+    @months_in_year
+  end
+
+  @doc """
+  Returns the number of months in a given `year`.
+
+  """
+  @impl true
+  def months_in_year(_year) do
     @months_in_year
   end
 
@@ -379,6 +389,32 @@ defmodule Cldr.Calendar.Ethiopic do
   end
 
   @doc false
+  calendar_impl()
+
+  def parse_date(string) do
+    Cldr.Calendar.Parse.parse_date(string, __MODULE__)
+  end
+
+  @doc false
+  calendar_impl()
+
+  def parse_utc_datetime(string) do
+    Cldr.Calendar.Parse.parse_utc_datetime(string, __MODULE__)
+  end
+
+  @doc false
+  calendar_impl()
+
+  def parse_naive_datetime(string) do
+    Cldr.Calendar.Parse.parse_naive_datetime(string, __MODULE__)
+  end
+
+  if Version.match?(System.version(), ">= 1.10.0-dev") do
+    @doc false
+    defdelegate parse_time(string), to: Calendar.ISO
+  end
+
+  @doc false
   defdelegate day_rollover_relative_to_midnight_utc, to: Calendar.ISO
 
   @doc false
@@ -389,21 +425,6 @@ defmodule Cldr.Calendar.Ethiopic do
 
   @doc false
   defdelegate time_to_day_fraction(hour, minute, second, microsecond), to: Calendar.ISO
-
-  # Calendar callbacks that appear in Elixir 1.10
-  if Version.match?(System.version(), ">= 1.10.0-dev") do
-    @doc false
-    defdelegate parse_date(date_string), to: Calendar.ISO
-
-    @doc false
-    defdelegate parse_time(time_string), to: Calendar.ISO
-
-    @doc false
-    defdelegate parse_utc_datetime(dt_string), to: Calendar.ISO
-
-    @doc false
-    defdelegate parse_naive_datetime(dt_string), to: Calendar.ISO
-  end
 
   @doc false
   defdelegate date_to_string(year, month, day), to: Calendar.ISO
