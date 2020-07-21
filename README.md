@@ -10,7 +10,7 @@ Like the Coptic calendar, the Ethiopic calendar has 12 months of 30 days plus 5 
 
 ## Usage
 
-[ex_cldr_calendars_ethiopic](https://hex.pm/packages/ex_cldr_calenars_ethiopic) conforms to both the `Calendar` and `Cldr.Calendar` behaviours and therefore the functions in the `Date`, `DateTime`, `NaiveDateTime`, `Time` and `Calendar` functions are supported.
+[ex_cldr_calendars_ethiopic](https://hex.pm/packages/ex_cldr_calendars_ethiopic) conforms to both the `Calendar` and `Cldr.Calendar` behaviours and therefore the functions in the `Date`, `DateTime`, `NaiveDateTime`, `Time` and `Calendar` functions are supported.
 
 For Elixir versions up to and including 1.9, a date can be created by:
 ```elixir
