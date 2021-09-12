@@ -1,5 +1,11 @@
 # Changelog
 
+## Cldr_Calendars_Ethiopic v1.0.0
+
+### Enhancements
+
+* Now based upon the template calendar in `Cldr.Calendar.Behaviour`
+
 ## Cldr_Calendars_Ethiopic v0.5.0
 
 This is the changelog for ex_cldr_calendars_ethiopic v0.5.0 released on August 29th, 2021.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_ethiopic/tags)
