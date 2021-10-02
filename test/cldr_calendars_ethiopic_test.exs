@@ -6,7 +6,7 @@ defmodule Cldr.Calendar.EthiopicTest do
   test "day of week" do
     {:ok, gregorian_date} = Date.new(2019,12,9, Cldr.Calendar.Gregorian)
     {:ok, ethiopic_date} = Date.convert(gregorian_date, Cldr.Calendar.Ethiopic)
-    assert Cldr.Calendar.day_of_week(ethiopic_date) == 1
+    assert Cldr.Calendar.day_of_week(ethiopic_date) == Cldr.Calendar.day_of_week(gregorian_date)
   end
 
   test "months in year" do

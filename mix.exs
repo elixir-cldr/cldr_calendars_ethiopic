@@ -54,6 +54,7 @@ defmodule Cldr.Calendars.Ethiopic.MixProject do
     [
       # {:ex_cldr_calendars, "~> 1.17"},
       {:ex_cldr_calendars, path: "../cldr_calendars"},
+
       {:stream_data, "~> 0.4", only: :test},
       {:ex_doc, "~> 0.19", only: [:release, :dev]}
     ]
