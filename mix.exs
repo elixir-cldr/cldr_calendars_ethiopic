@@ -1,7 +1,7 @@
 defmodule Cldr.Calendars.Ethiopic.MixProject do
   use Mix.Project
 
-  @version "1.0.0-dev"
+  @version "1.0.0-rc.0"
 
   def project do
     [
@@ -52,8 +52,7 @@ defmodule Cldr.Calendars.Ethiopic.MixProject do
 
   defp deps do
     [
-      # {:ex_cldr_calendars, "~> 1.17"},
-      {:ex_cldr_calendars, path: "../cldr_calendars"},
+      {:ex_cldr_calendars, "~> 1.17-rc"},
 
       {:stream_data, "~> 0.4", only: :test},
       {:ex_doc, "~> 0.19", only: [:release, :dev]}

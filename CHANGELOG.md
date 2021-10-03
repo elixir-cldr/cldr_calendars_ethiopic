@@ -1,6 +1,10 @@
 # Changelog
 
-## Cldr_Calendars_Ethiopic v1.0.0
+## Cldr_Calendars_Ethiopic v1.0.0-rc.0
+
+### Bug Fixes
+
+* Fixes `day_of_week/3`
 
 ### Enhancements
 
