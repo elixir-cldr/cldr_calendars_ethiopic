@@ -2,7 +2,7 @@
 
 ## Cldr_Calendars_Ethiopic v1.0.0
 
-This is the changelog for ex_cldr_calendars_ethiopic v1.0.0 released on ____, 2023.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_coptic/tags)
+This is the changelog for ex_cldr_calendars_ethiopic v1.0.0 released on April 28th, 2023.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_coptic/tags)
 
 **Note that ex_cldr_calendars is now supported on Elixir 1.11 and later**
 
@@ -15,6 +15,8 @@ This is the changelog for ex_cldr_calendars_ethiopic v1.0.0 released on ____, 20
 ### Enhancements
 
 * Bump to version 1.0.0.
+
+* Updates to [ex_cldr version 2.37.0](https://hex.pm/packages/ex_cldr/2.37.0) which includes data from [CLDR release 43](https://cldr.unicode.org/index/downloads/cldr-43).
 
 ## Cldr_Calendars_Ethiopic v0.5.0
 
