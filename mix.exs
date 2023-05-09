@@ -5,7 +5,7 @@ defmodule Cldr.Calendars.Ethiopic.MixProject do
 
   def project do
     [
-      app: :cldr_calendars_ethiopic,
+      app: :ex_cldr_calendars_ethiopic,
       version: @version,
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
