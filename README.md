@@ -66,9 +66,9 @@ The package can be installed by adding `cldr_calendars_ethiopic` to your list of
 ```elixir
 def deps do
   [
-    {:cldr_calendars_ethiopic, "~> 1.0.0"}
+    {:ex_cldr_calendars_ethiopic, "~> 1.0"}
   ]
 end
 ```
-Documentation can be found at [https://hexdocs.pm/cldr_calendars_ethiopic](https://hexdocs.pm/cldr_calendars_ethiopic).
+Documentation can be found at [https://hexdocs.pm/ex_cldr_calendars_ethiopic](https://hexdocs.pm/ex_cldr_calendars_ethiopic).
 
