@@ -66,7 +66,7 @@ The package can be installed by adding `cldr_calendars_ethiopic` to your list of
 ```elixir
 def deps do
   [
-    {:cldr_calendars_ethiopic, "~> 0.1.0"}
+    {:cldr_calendars_ethiopic, "~> 1.0.0"}
   ]
 end
 ```
