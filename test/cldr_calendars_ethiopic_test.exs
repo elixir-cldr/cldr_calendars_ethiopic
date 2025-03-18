@@ -19,4 +19,13 @@ defmodule Cldr.Calendar.EthiopicTest do
     assert ~D[1736-13-05 Cldr.Calendar.Ethiopic]
   end
 
+  test "Localizations" do
+    d = ~D[4000-01-01 Cldr.Calendar.EthiopicAmeteAlem]
+
+    assert "Wed" = Cldr.Calendar.localize(d, :day_of_week)
+    assert "Meskerem" = Cldr.Calendar.localize(d, :month)
+    assert {:error, :not_defined} = Cldr.Calendar.localize(d, :quarter)
+
+  end
+
 end
