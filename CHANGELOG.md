@@ -2,6 +2,14 @@
 
 **Note that ex_cldr_calendars and addon calendars are now supported on Elixir 1.12 and later**
 
+## Cldr_Calendars_Ethiopic v1.1.0
+
+This is the changelog for ex_cldr_calendars_ethiopic v1.1.0 released on March 19th, 2025.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_coptic/tags)
+
+### Enhancements
+
+* Adds the Ethiopic Amete Alem calendar. This is the same calendar as the Ethiopic calendar however its epoch is -5493-08-29 in the Julian calendar.
+
 ## Cldr_Calendars_Ethiopic v1.0.2
 
 This is the changelog for ex_cldr_calendars_ethiopic v1.0.2 released on March 19th, 2025.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_coptic/tags)
