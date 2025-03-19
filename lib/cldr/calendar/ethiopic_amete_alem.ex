@@ -66,19 +66,14 @@ defmodule Cldr.Calendar.EthiopicAmeteAlem do
 
   @doc """
   Calculates the year and era from the given `year`.
-  The ISO calendar has two eras: the current era which
-  starts in year 1 and is defined as era "1". And a
-  second era for those years less than 1 defined as
-  era "0".
+
+  The Ethiopic Amete Alem calendar has only one
+  era.
 
   """
   @spec year_of_era(year) :: {year, era :: 0..1}
-  def year_of_era(year) when year > 0 do
-    {year, 1}
-  end
-
-  def year_of_era(year) when year < 0 do
-    {abs(year), 0}
+  def year_of_era(year) do
+    {year, 0}
   end
 
   @impl true

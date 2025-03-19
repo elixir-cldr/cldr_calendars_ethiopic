@@ -2,6 +2,18 @@
 
 **Note that ex_cldr_calendars and addon calendars are now supported on Elixir 1.12 and later**
 
+## Cldr_Calendars_Ethiopic v1.1.1
+
+This is the changelog for ex_cldr_calendars_ethiopic v1.1.1 released on March 19th, 2025.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_coptic/tags)
+
+### Bug Fixes
+
+* Fix `Cldr.Calendar.EthiopicAmeteAlem.year_of_era/1` to always return `0` since this calendar has only one era (negative years are not expected).
+
+### Enhancements
+
+* Update to `ex_cldr_calendars` verison 2.x
+
 ## Cldr_Calendars_Ethiopic v1.1.0
 
 This is the changelog for ex_cldr_calendars_ethiopic v1.1.0 released on March 19th, 2025.  For older changelogs please consult the release tag on [GitHub](https://github.com/elixir-cldr/cldr_calendars_coptic/tags)
